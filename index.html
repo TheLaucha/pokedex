@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/e28f19f2a5.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=NTR&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="container-p">
+
+            <!------ HEADER ------>
+
+            <div class="header">
+                
+                <img src="images/logo.png" alt="">
+                
+            </div>
+
+            <!------ SCREEN ------>
+
+            <div class="screen">
+                <!------ WATCH ------>
+                <div class="watch-pokemon">
+                    <div id="datos">
+                        <p id="nombre"></p>
+                        <p id="altura"></p>
+                        <p id="peso"></p>
+                        <p id="hp"></p>
+                        <p id="ataque"></p>
+                        <p id="defensa"></p>
+                        <p id="ataque-especial"></p>
+                        <p id="defensa-especial"></p>
+                        <p id="velocidad"></p>
+                        <p id="tipo"><strong>Tipo:</strong></p>
+                        
+
+                    </div>
+                    <div id="imagenPokemon">
+                        <img id="imagen">
+                    </div>
+                </div>
+            </div>
+
+            <!------ ACTIONS ------>
+
+            <div class="actions">
+
+                <!------ ARROWS ------>
+
+                <div class="arrows">
+                    <i class="far fa-caret-square-left" id="back"></i>
+                    <i class="far fa-caret-square-right" id="next"></i>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <div class="container-s">
+
+            <!------ SEARCH ------>
+
+            <div class="search">
+                <input type="text" list="pokemons-list" id="list">
+
+                <datalist id="pokemons-list">
+                    
+                </datalist>
+
+                <button id="search">Buscar</button>
+            </div>
+
+            <div class="list-pages-container">
+
+                <div class="botones">
+                    <button id="atras">Atras</button>
+                    <button id="siguiente">Siguiente</button>
+                </div>
+
+                <ul id="list-page">
+                    
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="src/index.js"></script>
+    
+</body>
+</html>
