@@ -1,0 +1,23 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheLaucha/pokedex.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheLaucha/pokedex/issues"
+  },
+  "homepage": "https://github.com/TheLaucha/pokedex#readme",
+  "devDependencies": {
+    "cypress": "^5.3.0"
+  }
+}
