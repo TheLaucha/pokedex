@@ -93,7 +93,7 @@ body{
     margin-top: 10px;
 }
 
-.container-p .watch-pokemon #datos span{
+.container-p .watch-pokemon #datos .tipo{
     margin-left:10px;
     border: 1px solid #000;
     padding: 2px;
@@ -254,7 +254,7 @@ body{
     outline: 1px solid slategrey;
 }
 
-#pokemons-list{
+#pokemons-datalist{
     max-height: 100px;
 }
 
