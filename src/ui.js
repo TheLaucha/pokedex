@@ -1,4 +1,4 @@
-import {obtenerPokemones} from './cambios.js';
+import {obtenerPokemon,obtenerPokemones} from './pokeapi.js';
 import {
     actualizarPokemonId,
 } from './ux.js';
@@ -9,8 +9,7 @@ import {
 // CARGAR OPTIONS
 
 export function obtenerOpciones(){
-    const $TODOS_LOS_POKEMONES = "?offset=0&limit=1050";
-    return obtenerPokemones($TODOS_LOS_POKEMONES)
+    return obtenerPokemones(0,1050)
     .then(pokemones => pokemones.results);
 }
 
@@ -33,7 +32,7 @@ export function obtenerPokemonIngresado(){
 
 export function obtenerLista(offset = 0){
     const $URL_LISTA = `?offset=${offset}&limit=20`;
-    return obtenerPokemones($URL_LISTA)
+    return obtenerPokemon($URL_LISTA)
     .then(pokemones => pokemones.results)
 }
 

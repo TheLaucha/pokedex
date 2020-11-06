@@ -1,4 +1,4 @@
-import {obtenerPokemones} from './cambios.js';
+import {obtenerPokemon} from './pokeapi.js';
 import {
     obtenerOpciones,
     mostrarOpciones,
@@ -16,7 +16,7 @@ import {
 // ACTUALIZAR POKEMON MOSTRADO
 
 export function actualizarPokemonMostrado($pokemon){
-    obtenerPokemones(`/${$pokemon}`)
+    obtenerPokemon($pokemon)
     .then(pokemon => mostrarPokemon(pokemon))
     .then(actualizarPokemonId($pokemon));
 }

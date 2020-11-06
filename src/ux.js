@@ -1,4 +1,4 @@
-import {obtenerPokemones} from './cambios.js';
+import {obtenerPokemon} from './pokeapi.js';
 import {
     actualizarPokemonMostrado,
 } from './index.js';
@@ -53,6 +53,8 @@ export function actualizarLista($boton){
 const $botonBack = document.querySelector("#back");
 const $botonNext = document.querySelector("#next");
 export let pokemonId = 1;
+const ultimoPokemonId = 1050;
+const primerPokemonId = 1;
 
 $botonBack.onclick = () =>{
     cambiarPokemonId("back");
@@ -64,15 +66,15 @@ $botonNext.onclick = () =>{
 
 export function cambiarPokemonId($boton){
     if ($boton === "back"){
-        if (pokemonId === 1){
+        if (pokemonId === primerPokemonId){
             pokemonId = 1;
         } else {
             pokemonId -=1;
         }
     } 
     if($boton === "next"){
-        if (pokemonId === 1050){
-            pokemonId = 1050;
+        if (pokemonId === ultimoPokemonId){
+            pokemonId = ultimoPokemonId;
         } else{
             pokemonId += 1;
         }
@@ -83,7 +85,7 @@ export function cambiarPokemonId($boton){
 // ACTUALIZAR POKEMON ID
 
 export function actualizarPokemonId($item){
-    obtenerPokemones(`/${$item}`)
+    obtenerPokemon(`/${$item}`)
     .then(pokemon =>{
         pokemonId = pokemon.id;
     })
